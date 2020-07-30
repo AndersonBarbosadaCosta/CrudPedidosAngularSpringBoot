@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemandReadComponent implements OnInit {
   demands: Demand[];
-  displayedColumns = ['id', 'cliente', 'dtCompra', 'total', 'produtos', 'acao'];
+  displayedColumns = ['id', 'cliente', 'dtPedido', 'total', 'produtos', 'acao'];
 
   constructor(private demandService: DemandService) { }
 

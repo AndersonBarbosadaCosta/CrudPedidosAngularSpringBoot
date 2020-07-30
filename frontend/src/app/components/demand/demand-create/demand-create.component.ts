@@ -19,7 +19,7 @@ export class DemandCreateComponent implements OnInit {
 
   demand: Demand = {
     cliente: null,
-    dtCompra: "",
+    dtPedido: "",
     total: null,
     produtos: []
   }

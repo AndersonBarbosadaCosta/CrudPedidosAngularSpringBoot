@@ -3,6 +3,6 @@ export interface Demand {
     id?: number,
     cliente: number,
     total: number,
-    dtCompra: string,
+    dtPedido: string,
     produtos: Product[]
 }

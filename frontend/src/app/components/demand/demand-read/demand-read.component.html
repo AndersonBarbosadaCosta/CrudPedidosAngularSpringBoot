@@ -8,12 +8,12 @@
         <!-- Cliente Column -->
         <ng-container matColumnDef="cliente">
             <th mat-header-cell *matHeaderCellDef>Cliente</th>
-            <td mat-cell *matCellDef="let row">{{row.cliente}}</td>
+            <td mat-cell *matCellDef="let row">{{row.cliente.cpf}}</td>
         </ng-container>
         <!-- Data da Compra Column -->
-        <ng-container matColumnDef="dtCompra">
+        <ng-container matColumnDef="dtPedido">
             <th mat-header-cell *matHeaderCellDef>Data da Compra</th>
-            <td mat-cell *matCellDef="let row">{{row.dtCompra | date}}</td>
+            <td mat-cell *matCellDef="let row">{{row.dtPedido }}</td>
         </ng-container>
 
         <!-- Total da Compra Column -->
