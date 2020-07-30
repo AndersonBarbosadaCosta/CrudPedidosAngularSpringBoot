@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-title>Deletar Pedido</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput name="cliente" [value]="demand.cliente" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput name="dtCompra" [value]="demand.dtCompra" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput name="total" [value]="demand.total" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput name="produtos" [value]="demand.produtos" disabled>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="demandDelete()" color="warn">Remover</button>
+    <button mat-raised-button (click)="cancel()">Cancelar</button>
+</mat-card>

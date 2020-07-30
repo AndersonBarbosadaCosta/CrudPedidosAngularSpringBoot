@@ -1,0 +1,16 @@
+<mat-card>
+    <mat-card-title>Deletar Cliente</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput name="nome" [value]="client.nome" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput name="cpf" [value]="client.cpf" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput name="dtNascimento" [value]="client.dtNascimento" disabled>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="clientDelete()" color="warn">Remover</button>
+    <button mat-raised-button (click)="cancel()">Cancelar</button>
+</mat-card>

@@ -1,0 +1,36 @@
+<mat-card>
+    <mat-card-title>Novo Pedido</mat-card-title>
+    <form>
+        <mat-form-field appearance="fill">
+            <mat-label>Data da Compra</mat-label>
+          <!-- #docregion toggle -->
+            <input matInput [matDatepicker]="picker" name="dtCompra" [(ngModel)]="demand.dtCompra">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          <!-- #enddocregion toggle -->
+          </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Clientes</mat-label>
+            <mat-select [(ngModel)]="demand.cliente" name="cliente">
+              <mat-option *ngFor="let cliente of clientes" [value]="cliente.id">
+                {{cliente.nome}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+     
+        <mat-form-field appearance="fill">
+            <mat-label>Produtos</mat-label>
+            <mat-select [(ngModel)]="demand.produtos" name="produtos" multiple>
+              <mat-option *ngFor="let produto of produtosCombo" [value]="produto.id">
+                {{produto.nome}} 
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput  name="total" [(ngModel)]="demand.total" placeholder="Total Pedido (R$)">
+        </mat-form-field>
+      
+    </form>
+    <button mat-raised-button (click)="demandCreate()" color="primary">Salvar</button>
+    <button mat-raised-button (click)="cancel()">Cancelar</button>
+</mat-card>

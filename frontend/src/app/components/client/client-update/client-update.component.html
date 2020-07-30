@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-title>Atualizar Cliente</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput name="nome" [(ngModel)]="client.nome" placeholder="Nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput name="cpf" [(ngModel)]="client.cpf" placeholder="Cpf" maxlength="11">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Data de nascimento</mat-label>
+          <!-- #docregion toggle -->
+            <input matInput [matDatepicker]="picker" name="dtNascimento" [(ngModel)]="client.dtNascimento">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          <!-- #enddocregion toggle -->
+          </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="clientUpdate()" color="primary">Atualizar</button>
+    <button mat-raised-button (click)="cancel()">Cancelar</button>
+</mat-card>
